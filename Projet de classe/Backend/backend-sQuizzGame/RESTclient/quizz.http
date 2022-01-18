@@ -1,0 +1,86 @@
+### See quizz most liked
+GET http://localhost:3000/quizz/mostliked
+
+### See quizz most liked
+GET http://localhost:3000/quizz/abonnements/1
+
+### See all quizz
+GET http://localhost:3000/quizz/3
+
+### Login user
+# @name login
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "email": "DMifflin@gmail.com",
+  "password":"123"
+}
+
+### See all quizz
+GET http://localhost:3000/quizz
+Authorization: {{login.response.body.token}}
+
+### Get quizz from ID
+
+GET http://localhost:3000/quizz/3
+
+### See all quizz of an user
+GET http://localhost:3000/quizz/forUser/1
+
+### See all quizz of an user
+GET http://localhost:3000/quizz/byEmail/stefanIPL@gmail.com
+
+### See number of likes for a quizz 
+GET http://localhost:3000/quizz/likes/17
+
+### See number of likes for a quizz 
+DELETE  http://localhost:3000/quizz/3
+Authorization: {{login.response.body.token}}
+
+### Add a quizz
+POST http://localhost:3000/quizz/
+Content-Type: application/json
+
+{
+    "id_creator": 1,
+    "name": "Quizz Star Wars",
+    "description": "Test de culture générale sur les années 2000",
+    "questions":    [{  "question": "Quel sabre ?",
+                        "answers": [{"answer":"Vert", "correct": true},
+                                    {"answer":"Rouge", "correct": false},
+                                    {"answer":"Bleu", "correct": false},
+                                    {"answer":"Mauve", "correct": false}]    
+                    },
+                    {  "question": "Nom?",
+                        "answers": [{"answer":"jedi", "correct": true},
+                                    {"answer":"padawan", "correct": false},
+                                    {"answer":"chuwi", "correct": false},
+                                    {"answer":"solo", "correct": false}]    
+                    }
+                    ]
+}
+
+### like a quizz
+
+POST http://localhost:3000/quizz/likes/
+Content-Type: application/json
+
+{
+  "id_quizz": 59,
+  "id_user": 9
+}
+
+### is a quizz liked
+
+GET http://localhost:3000/quizz/isLiked?id_quizz=59&id_user=9
+
+### unlike a quizz
+
+DELETE http://localhost:3000/quizz/unlike/
+Content-Type: application/json
+
+{
+  "id_quizz": 59,
+  "id_user": 9
+}

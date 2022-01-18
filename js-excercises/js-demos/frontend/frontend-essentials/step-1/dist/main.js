@@ -1,0 +1,1 @@
+document.querySelector("header").addEventListener("click",(()=>{const e=document.querySelector("#audioPlayer");e.paused?e.play():e.pause()}));

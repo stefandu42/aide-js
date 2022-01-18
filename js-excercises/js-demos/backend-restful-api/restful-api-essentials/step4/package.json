@@ -1,0 +1,27 @@
+{
+  "name": "restful-api-essentials-step4",
+  "description": "RESTful API : Authentification d’utilisateurs & autorisation des opérations de MàJ de données",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "debug": "nodemon ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1"
+  },
+  "author": {
+    "name": "e-baron"
+  },
+  "license": "CC-BY-SA-4.0"
+}

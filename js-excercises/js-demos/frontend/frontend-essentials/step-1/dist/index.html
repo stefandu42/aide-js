@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5/CSS basics</title>
+    <link rel="icon" href="./img/pizza-svgrepo-com.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="vh-100 d-flex flex-column"
+    style="
+      background-image: url(./img/pizza.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    "
+  >
+    <header>
+      <h1 class="text-center ">We love Pizza</h1>
+    </header>
+
+    <main class="h-100 flex-grow-1 text-center ">
+      <p>My HomePage</p>
+      <p>
+        Because we love JS, you can also click on the header to stop / start the
+        music ; )
+      </p>
+
+      <audio id="audioPlayer" controls autoplay>
+        <source
+          src="./sound/Infecticide-11-Pizza-Spinoza.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </main>
+
+    <footer class="text-center text-white font-weight-bold py-2">
+      <h1>But we also love JS</h1>
+      <img height="50px" src="./img/js-logo.png" alt="" />
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

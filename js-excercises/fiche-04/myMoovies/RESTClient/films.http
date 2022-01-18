@@ -1,0 +1,66 @@
+### Read all films
+GET http://localhost:3000/films
+
+### Read films by minimum-duration filter
+GET http://localhost:3000/films?minimum-duration=200
+
+### Read film identified by 2
+GET http://localhost:3000/films/2
+
+
+### Create a film
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+    "titre":"Magic Green",
+    "duration":140,
+    "budget": 140000,
+    "link":"https://www.other.com"
+}
+
+### Update the film identified by 2
+PUT http://localhost:3000/films/15
+Content-Type: application/json
+
+{
+    "titre":"Ha"
+}
+
+### Delete film identified by 3
+DELETE http://localhost:3000/films/4
+
+
+
+######### ERROR OPERATION  ###########
+
+### Read film which does not exists
+GET http://localhost:3000/films/100
+
+### Create a film without info for a property
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+    "titre":"",
+    "duration":140,
+    "budget": 140000,
+    "link":"https://www.other.com"
+}
+
+### Update for a film which does not exist
+PUT http://localhost:3000/films/200
+Content-Type: application/json
+
+{
+    "title":"Magic Green 2"
+}
+
+### Update for a film which does not provide any info for a property
+PUT http://localhost:3000/films/1
+Content-Type: application/json
+
+{
+    "titre":"Magic Green 2",
+    "duration":1
+}

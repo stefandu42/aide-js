@@ -1,0 +1,30 @@
+{
+  "name": "myjscourse-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "myJScourse's frontend boilerplate",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve"
+  },
+  "author": "e-baron",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.1.1",
+    "easytimer.js": "^4.5.1",
+    "timer-node": "^5.0.5"
+  },
+  "license": "CC-BY-SA-4.0"
+}
